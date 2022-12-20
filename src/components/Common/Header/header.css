@@ -47,14 +47,16 @@
     }
     .drawer-wrapper {
       display: block;
+      color: white;
     }
     .mobile-drawer {
       width: 40vw;
       height: 100vh;
-      background-color: var(--black);
+      background-image: linear-gradient(to right,var(--purple),var(--skyblue),var(--darkblue));
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      
     }
   }
