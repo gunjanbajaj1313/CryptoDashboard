@@ -19,7 +19,7 @@ export default function MobileDrawer() {
           <a href="/">
             <p className="link">Watchlist</p>
           </a>
-          <a href="/">
+          <a href="/dashboard">
             <p className="link">Dashboard</p>
           </a>
         </div>
