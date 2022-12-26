@@ -12,6 +12,7 @@ import PriceToggle from "../components/Coin/PriceToggle/priceToggle";
 import { getCoinData } from "../functions/getCoinData";
 import { getCoinPrices } from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
+import Footer from "../components/Common/Footer/footer";
 
 
 function CoinPage() {
@@ -33,7 +34,7 @@ function CoinPage() {
     setLoading(true);
     const data = await getCoinData(id);
     if (data) {
-      coinObject(setCoin, data); //For Coin Obj being passed in the List
+      coinObject(setCoin, data); 
       const prices = await getCoinPrices(id, days, priceType);
       if (prices) {
         settingChartData(setChartData, prices, data);
@@ -64,12 +65,14 @@ function CoinPage() {
 
   return (
     <div>
+      <Header />
       {loading || !coin?.id || !chartData ? (
         <Loader />
       ) : (
         <>
-          <Header />
+        <Header />
           <div className="grey-wrapper">
+            
             <List coin={coin} delay={0.1} />
           </div>
           <div className="grey-wrapper">
@@ -78,11 +81,12 @@ function CoinPage() {
               handlePriceTypeChange={handlePriceTypeChange}
               priceType={priceType}
             />
-        { chartData &&   <LineChart chartData={chartData} priceType={priceType}  />}
+            <LineChart chartData={chartData} priceType={priceType} />
           </div>
           <CoinInfo name={coin.name} desc={coin.desc} />
         </>
       )}
+      <Footer />
     </div>
   );
 }

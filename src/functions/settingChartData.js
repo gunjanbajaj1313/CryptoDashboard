@@ -1,6 +1,6 @@
 import { convertDate } from "./convertDate";
 
-  export const settingChartData = (
+export const settingChartData = (
   setChartData,
   prices1,
   coin1,
@@ -8,11 +8,11 @@ import { convertDate } from "./convertDate";
   prices2
 ) => {
   setChartData({
-    labels: prices1?.map((data) => convertDate(data[0])),
+    labels: prices1.map((data) => convertDate(data[0])),
     datasets: [
       {
         label: coin1?.name ?? "",
-        data: prices1?.map((data) => data[1]),
+        data: prices1.map((data) => data[1]),
         borderWidth: 1,
         fill: true,
         tension: 0.25,
@@ -22,7 +22,7 @@ import { convertDate } from "./convertDate";
       },
       prices2 && {
         label: coin2?.name ?? "",
-        data: prices2?.map((data) => data[1]),
+        data: prices2.map((data) => data[1]),
         borderWidth: 1,
         fill: true,
         tension: 0.25,
@@ -33,5 +33,4 @@ import { convertDate } from "./convertDate";
       },
     ],
   });
-  console.log("chart data set")
 };
