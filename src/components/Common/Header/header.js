@@ -2,7 +2,7 @@ import { Switch } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Button from "../Button/button";
-import MobileDrawer from "./Drawer";
+import MobileDrawer from "./drawer";
 import "./header.css";
 
 function Header() {
