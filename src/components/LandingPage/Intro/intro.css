@@ -99,6 +99,9 @@
     align-items: center;
     justify-content: flex-start;
   }
+  .gradient{
+    height: 300px;
+  }
 
   .landing-left {
     width: 100%;
@@ -108,12 +111,14 @@
   .landing-right {
     justify-content: center;
     margin-right: auto;
-    margin-top: 4rem;
+    margin-bottom: 50px;
+    margin-top: 1rem;
   }
 
   .iphone {
     left: auto;
     right: auto;
+    height: 400px;
   }
 
   .heading-1,
@@ -130,6 +135,6 @@
 
 @media only screen and (max-width: 380px) {
   .landing-wrapper {
-    height: 100vh;
+    height: 120vh;
   }
 }
